@@ -2,17 +2,17 @@
 // @name         DNA TV Links to Telkku Programs
 // @namespace    telkku.com
 // @description  Adds custom DNA TV search links to Telkku program pages
-// @downloadURL  https://gist.github.com/KimeT/726de9e3370adc480816/raw/DNA-TV-Links-to-Telkku-Programs.user.js
+// @downloadURL  https://github.com/KimeT/DNA-TV-search-enhancements/blob/master/DNA-TV-Links-to-Telkku-Programs.user.js
 // @icon         http://www.telkku.com/favicon.ico
 // @match        http://classic.telkku.com/program/show/*
-// @version      0.1
+// @version      0.5.2
 // @author       KimeT
-// @homepage     https://gist.github.com/KimeT
+// @homepage     https://github.com/KimeT/DNA-TV-search-enhancements
 // @grant        none
 // ==/UserScript==
 
 /* Custom styles to be added on page */
-var styles =  '';
+/*var styles =  '';*/
 
 /* Custom (jQuery) script to be added on page, needs the page to have jQuery already */
 var main = function () {

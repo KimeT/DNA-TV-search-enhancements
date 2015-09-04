@@ -2,17 +2,17 @@
 // @name         DNA TV EPG Custom Search
 // @namespace    tv.dna.fi
 // @description  Adds custom DNA TV EPG search based on querystring
-// @downloadURL  https://gist.github.com/KimeT/839a31086d57c8726d91/raw/DNA-TV-EPG-Custom-Search.user.js
+// @downloadURL  https://github.com/KimeT/DNA-TV-search-enhancements/blob/master/DNA-TV-EPG-Custom-Search.user.js
 // @icon         https://tv.dna.fi/images/matkatv/favicon.ico
 // @match        https://tv.dna.fi/webui/epg*
-// @version      0.4
-// @author       Kimmo Tahvanainen
-// @homepage     https://gist.github.com/KimeT
+// @version      0.5.2
+// @author       KimeT
+// @homepage     https://github.com/KimeT/DNA-TV-search-enhancements
 // @grant        none
 // ==/UserScript==
 
 /* Custom styles to be added on page */
-var styles =  '';
+/*var styles =  '';*/
 
 /* Custom (jQuery) script to be added on page, needs the page to have jQuery already */
 var main = function () {
