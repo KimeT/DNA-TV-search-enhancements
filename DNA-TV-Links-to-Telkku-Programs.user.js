@@ -26,7 +26,7 @@ var main = function () {
 			$('nav.oti-outbound-nav:first ul').append($elem);
 		});
 	} else {
-		alert($('h1.page__title span.ng-binding'));
+		//alert($('h1.page__title span.ng-binding'));
 	}
 };
 
