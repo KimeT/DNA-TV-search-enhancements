@@ -1,13 +1,15 @@
+<link rel="stylesheet" type="text/css" href="css/readme.css" />
+
 # DNA-TV-search-enhancements
 
 Greasemonkey user scripts to add custom search enhancements to DNA TV website + integration to Telkku.com.
 
 ## TOC
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC autolink=true -->
 
-- User script to DNA TV EPG
-- User script to Telkku.com
-- Installation
+- [User script to DNA TV EPG](#user-script-to-dna-tv-epg)
+- [User script to Telkku.com](#user-script-to-telkkucom)
+- [Installation](#installation)
 
 <!-- /MarkdownTOC -->
 
@@ -17,7 +19,7 @@ Greasemonkey user scripts to add custom search enhancements to DNA TV website + 
 *Permalink to newest version: <https://github.com/KimeT/DNA-TV-search-enhancements/blob/master/DNA-TV-EPG-Custom-Search.user.js>*
 
 This greasemonkey script adds custom [DNA TV EPG](https://tv.dna.fi/webui/epg "DNA TV - Ohjelmaopas") search functionality based on querystring. The EPG is searched after page load with search term set in customsearch parameter:
-![Telkku screenshot](images/DNA-TV_customsearch.png)
+[![Telkku screenshot](images/DNA-TV_customsearch.png)](images/DNA-TV_customsearch.png)
 
 Although not necessary, this script is designed to be used together with corresponding greasemonkey script **DNA-TV-Links-to-Telkku-Programs.user.js** for [Telkku](http://classic.telkku.com/ "Telkku.com").
 
@@ -27,7 +29,7 @@ Although not necessary, this script is designed to be used together with corresp
 *Permalink to newest version: <https://github.com/KimeT/DNA-TV-search-enhancements/blob/master/DNA-TV-Links-to-Telkku-Programs.user.js>*
 
 This greasemonkey script adds link to DNA TV EPG search into [Telkku](http://classic.telkku.com/ "Telkku.com") classic program views:
-![DNA TV EPG screenshot](images/DNA-TV_customsearch.png)
+[![DNA TV EPG screenshot](images/DNA-TV_customsearch.png)](images/DNA-TV_customsearch.png)
 
 To be able to utilize this script, you need corresponding greasemonkey script **DNA-TV-EPG-Custom-Search.user.js** for [DNA TV EPG](https://tv.dna.fi/webui/epg "DNA TV - Ohjelmaopas") installed also.
 
