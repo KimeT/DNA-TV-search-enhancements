@@ -5,7 +5,8 @@
 // @downloadURL  https://github.com/KimeT/DNA-TV-search-enhancements/blob/master/DNA-TV-Links-to-Telkku-Programs.user.js
 // @icon         http://www.telkku.com/favicon.ico
 // @match        http://classic.telkku.com/program/show/*
-// @version      0.5.2
+// @match        http://www.telkku.com/ohjelmat/*
+// @version      0.5.3
 // @author       KimeT
 // @homepage     https://github.com/KimeT/DNA-TV-search-enhancements
 // @grant        none
@@ -17,12 +18,16 @@
 /* Custom (jQuery) script to be added on page, needs the page to have jQuery already */
 var main = function () {
 	// Create search link after DOM is ready
-	$(function() {
-		var programName = $('#programName').text().trim().replace(/ /g, '+').replace(/&/g, '%26');
-		var searchUrl = 'https://tv.dna.fi/webui/epg' + (programName.length ? '?customsearch=' + programName : '');
-		var $elem = '<li><a href="' + searchUrl + '" target="_blank" title="DNA TV" class="btn">DNA TV</a></li>';
-		$('nav.oti-outbound-nav:first ul').append($elem);
-	});
+	if (location.hostname == 'classic.telkku.com') {
+		$(function() {
+			var programName = $('#programName').text().trim().replace(/ /g, '+').replace(/&/g, '%26');
+			var searchUrl = 'https://tv.dna.fi/webui/epg' + (programName.length ? '?customsearch=' + programName : '');
+			var $elem = '<li><a href="' + searchUrl + '" target="_blank" title="DNA TV" class="btn">DNA TV</a></li>';
+			$('nav.oti-outbound-nav:first ul').append($elem);
+		});
+	} else {
+		alert('Hello?');
+	}
 };
 
 /* Inject custom styles */
