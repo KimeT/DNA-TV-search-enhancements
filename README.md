@@ -2,7 +2,7 @@
 
 # DNA-TV-search-enhancements
 
-Greasemonkey user scripts to add custom search enhancements to DNA TV website + integration to Telkku.com.
+Greasemonkey user scripts to add custom search enhancements to DNA TV website + integration to Telkku.com (new UI & claccic UI).
 
 ## TOC
 <!-- MarkdownTOC autolink=true -->
@@ -21,7 +21,7 @@ Greasemonkey user scripts to add custom search enhancements to DNA TV website + 
 This greasemonkey script adds custom [DNA TV EPG](https://tv.dna.fi/webui/epg "DNA TV - Ohjelmaopas") search functionality based on querystring. The EPG is searched after page load with search term set in customsearch parameter:
 [![DNA TV EPG screenshot](images/DNA-TV_customsearch.png)](https://raw.githubusercontent.com/KimeT/DNA-TV-search-enhancements/master/images/DNA-TV_customsearch.png)
 
-Although not necessary, this script is designed to be used together with corresponding greasemonkey script **DNA-TV-Links-to-Telkku-Programs.user.js** for [Telkku](http://classic.telkku.com/ "Telkku.com").
+Although not necessary, this script is designed to be used together with corresponding greasemonkey script **DNA-TV-Links-to-Telkku-Programs.user.js** for [Telkku](http://www.telkku.com/ "Telkku.com") (also for [classic.telkku.com](http://classic.telkku.com/ "Telkku.com classic")).
 
 
 ## User script to Telkku.com
