@@ -39,11 +39,12 @@ To be able to utilize this script, you need corresponding greasemonkey script **
 
 - For Firefox: install [Greasemonkey](https://addons.mozilla.org/fi/firefox/addon/greasemonkey/) extension first.
 - For Chrome: install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) extension first.
+- For Internet Explorer: testing these user scripts with [Trixie](http://sourceforge.net/projects/trixiewpf45/) and IE11, scripts do not work correctly with IE11 + Trixie (v. 0.1.3.0 Beta) at the moment.
 
 Install user scripts by clicking these links with Firefox / Chrome:
 
 - DNA TV EPG user script: [DNA-TV-EPG-Custom-Search.user.js](https://github.com/KimeT/DNA-TV-search-enhancements/raw/master/DNA-TV-EPG-Custom-Search.user.js)
 - Telkku.com user script: [DNA-TV-Links-to-Telkku-Programs.user.js](https://github.com/KimeT/DNA-TV-search-enhancements/raw/master/DNA-TV-Links-to-Telkku-Programs.user.js)
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KimeT/dna-tv-search-enhancements/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KimeT/dna-tv-search-enhancements/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
