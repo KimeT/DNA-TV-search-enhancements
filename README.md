@@ -44,3 +44,6 @@ Install user scripts by clicking these links with Firefox / Chrome:
 
 - DNA TV EPG user script: [DNA-TV-EPG-Custom-Search.user.js](https://github.com/KimeT/DNA-TV-search-enhancements/raw/master/DNA-TV-EPG-Custom-Search.user.js)
 - Telkku.com user script: [DNA-TV-Links-to-Telkku-Programs.user.js](https://github.com/KimeT/DNA-TV-search-enhancements/raw/master/DNA-TV-Links-to-Telkku-Programs.user.js)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KimeT/dna-tv-search-enhancements/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
