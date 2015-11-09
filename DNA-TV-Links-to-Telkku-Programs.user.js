@@ -6,7 +6,7 @@
 // @icon         http://www.telkku.com/favicon.ico
 // @match        http://classic.telkku.com/program/show/*
 // @match        http://www.telkku.com/ohjelmat/*
-// @version      0.5.6
+// @version      0.5.7
 // @author       KimeT
 // @homepage     https://github.com/KimeT/DNA-TV-search-enhancements
 // @grant        none
@@ -15,17 +15,17 @@
 /* Custom styles to be added on page */
 var styles =  '\n'
 						+ '.card .card__external_links_list .card__external_links_item img[alt="DNA TV"] {\n'
-						+ ' max-height: 2.4rem;\n'
-						+ ' max-width: 10rem;\n'
-						+ ' background-color: black;\n'
-						+ ' border-radius: 0.2rem;\n'
+						+ '	max-height: 2.4rem;\n'
+						+ '	max-width: 10rem;\n'
+						+ '	background-color: black;\n'
+						+ '	border-radius: 0.2rem;\n'
 						+ '}\n'
-						+ 'a.userscript-link::hover {\n'
-						+ ' opacity: 0.67;\n'
+						+ 'a.userscript-link:hover {\n'
+						+ '	opacity: 0.67;\n'
 						+ '}\n'
-						+ 'a.userscript-link img[alt="DNA TV"] {\n'
-						+ ' max-height: 2rem;\n'
-						+ ' max-width: 2rem;\n'
+						+ 'a.userscript-link img {\n'
+						+ '	max-height: 2rem;\n'
+						+ '	max-width: 2rem;\n'
 						+ '}\n';
 
 /* Custom (jQuery) script to be added on page, needs the page to have jQuery already */
@@ -49,9 +49,9 @@ var main = function () {
 								+ '</li>';
 			$('ul.card__external_links_list:first').append($elem);
 			$elem = '<a class="userscript-link" href="' + searchUrl + '" target="_blank" title="Ohjelmahaku DNA TV:ssä">'
-						+ '	<img src="https://www.dna.fi/documents/15182/25889922/TataOnDNATV_90x90.png" alt="DNA TV">'
+						+ '	<img src="https://www.dna.fi/documents/15182/25889922/TataOnDNATV_90x90.png" alt="- DNA TV">'
 						+ '</a>'
-		$('h1.page__title a:first').append($elem);
+		$('h1.page__title').append($elem);
 		}
 		window.pageLoadTest = function () {
 			if ($('h1.page__title span.ng-binding').length) {
