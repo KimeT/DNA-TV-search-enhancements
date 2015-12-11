@@ -6,7 +6,7 @@
 // @icon         http://www.telkku.com/favicon.ico
 // @match        http://classic.telkku.com/program/show/*
 // @match        http://www.telkku.com/ohjelmat/*
-// @version      0.5.7
+// @version      0.6.0
 // @author       KimeT
 // @homepage     https://github.com/KimeT/DNA-TV-search-enhancements
 // @grant        none
@@ -14,18 +14,20 @@
 
 /* Custom styles to be added on page */
 var styles =  '\n'
-						+ '.card .card__external_links_list .card__external_links_item img[alt="DNA TV"] {\n'
-						+ '	max-height: 2.4rem;\n'
-						+ '	max-width: 10rem;\n'
-						+ '	background-color: black;\n'
-						+ '	border-radius: 0.2rem;\n'
+						+ '.user-script-linkdiv a.ical {\n'
+						+ '	top: 2.73rem;\n'
 						+ '}\n'
-						+ 'a.userscript-link:hover {\n'
+						+ 'a.ical:hover {\n'
 						+ '	opacity: 0.67;\n'
 						+ '}\n'
-						+ 'a.userscript-link img {\n'
-						+ '	max-height: 2rem;\n'
-						+ '	max-width: 2rem;\n'
+						+ '.card .card__social_share .card__social_imdb {\n'
+						+ '	background-color: #dfb91e;\n'
+						+ '	color: #000;\n'
+						+ '	font-size: 15px;\n'
+						+ '	font-weight: bold;\n'
+						+ '	letter-spacing:-0.09rem;\n'
+						+ '	padding:0 0.325rem;\n'
+						+ '	border-radius: 0.2rem;\n'
 						+ '}\n';
 
 /* Custom (jQuery) script to be added on page, needs the page to have jQuery already */
@@ -40,21 +42,20 @@ var main = function () {
 		});
 	} else {
 		window.addDnaTVLinks = function () {
-			var programName = $('h1.page__title span.ng-binding').text().trim().replace(/ /g, '+').replace(/&/g, '%26');
+			var programName = $('h1.page__title').text().trim().replace(/ /g, '+').replace(/&/g, '%26');
 			var searchUrl = 'https://tv.dna.fi/webui/epg' + (programName.length ? '?customsearch=' + programName : '');
-			var $elem = '<li class="card__external_links_item ng-scope" ng-repeat="link in ::card.externalLinks">'
-								+ '	<a href="' + searchUrl + '" target="_blank" title="Ohjelmaan liittyvä haku DNA TV:ssä">'
-								+ '		<img src="https://tv.dna.fi/images/matkatv/logo_dnatv.png" alt="DNA TV">'
-								+ '	</a>'
+			var imdbUrl = 'http://www.imdb.com/' + (programName.length ? 'find?q=' + programName + '&s=tt&site=aka' : '');
+			var $elem = '<div class="user-script-linkdiv">'
+								+ '	<a class="ical" href="' + searchUrl + '" target="_blank" title="Ohjelmaan liittyvä haku DNA TV:ssä">DNA TV -tallennus</a>'
+								+ '</div>';
+			$('.site__main .card__time_items:first').append($elem);
+			var $elem = '<li>'
+								+ '	<a href="' + imdbUrl + '" class="card__social__share__item card__social_imdb" title="IMDb" target="_blank">IMDb</a>'
 								+ '</li>';
-			$('ul.card__external_links_list:first').append($elem);
-			$elem = '<a class="userscript-link" href="' + searchUrl + '" target="_blank" title="Ohjelmahaku DNA TV:ssä">'
-						+ '	<img src="https://www.dna.fi/documents/15182/25889922/TataOnDNATV_90x90.png" alt="- DNA TV">'
-						+ '</a>'
-		$('h1.page__title').append($elem);
+			$('.site__main .card__social_share:first ul').append($elem);
 		}
 		window.pageLoadTest = function () {
-			if ($('h1.page__title span.ng-binding').length) {
+			if ($('h1.page__title').length) {
 				clearInterval(window.pageLoadTestIntervalID);
 				window.pageLoadTestIntervalID = undefined;
 				addDnaTVLinks();
