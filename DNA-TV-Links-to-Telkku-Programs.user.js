@@ -6,7 +6,7 @@
 // @icon         http://www.telkku.com/favicon.ico
 // @match        http://classic.telkku.com/program/show/*
 // @match        http://www.telkku.com/ohjelmat/*
-// @version      0.6.0
+// @version      0.6.1
 // @author       KimeT
 // @homepage     https://github.com/KimeT/DNA-TV-search-enhancements
 // @grant        none
@@ -42,20 +42,20 @@ var main = function () {
 		});
 	} else {
 		window.addDnaTVLinks = function () {
-			var programName = $('h1.page__title').text().trim().replace(/ /g, '+').replace(/&/g, '%26');
+			var programName = $('h1.page__title span:first').text().trim().replace(/ /g, '+').replace(/&/g, '%26');
 			var searchUrl = 'https://tv.dna.fi/webui/epg' + (programName.length ? '?customsearch=' + programName : '');
-			var imdbUrl = 'http://www.imdb.com/' + (programName.length ? 'find?q=' + programName + '&s=tt&site=aka' : '');
+			/*var imdbUrl = 'http://www.imdb.com/' + (programName.length ? 'find?q=' + programName + '&s=tt&site=aka' : '');*/
 			var $elem = '<div class="user-script-linkdiv">'
 								+ '	<a class="ical" href="' + searchUrl + '" target="_blank" title="Ohjelmaan liittyvä haku DNA TV:ssä">DNA TV -tallennus</a>'
 								+ '</div>';
 			$('.site__main .card__time_items:first').append($elem);
-			var $elem = '<li>'
+			/*var $elem = '<li>'
 								+ '	<a href="' + imdbUrl + '" class="card__social__share__item card__social_imdb" title="IMDb" target="_blank">IMDb</a>'
 								+ '</li>';
-			$('.site__main .card__social_share:first ul').append($elem);
+			$('.site__main .card__social_share:first ul').append($elem);*/
 		}
 		window.pageLoadTest = function () {
-			if ($('h1.page__title').length) {
+			if ($('h1.page__title span:first').length) {
 				clearInterval(window.pageLoadTestIntervalID);
 				window.pageLoadTestIntervalID = undefined;
 				addDnaTVLinks();
